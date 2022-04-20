@@ -4,7 +4,7 @@ require 'colorize'
 #require_relative "./main.rb"
 require_relative "./history.rb"
 require_relative "./geography.rb"
-#require_relative "./litphil.rb"
+require_relative "./litphil.rb"
 
 def topics
 @availabletopics = ['History', 'Geography', 'Literature and Philosophy', 'Exit']
@@ -17,24 +17,15 @@ def choosetopics
     case topicchoice
     
         when 'History'
-            sleep(2)
-            puts "\n\nTaking you to the History quiz. Please wait a moment"
-            sleep(3)
-            system 'clear'
+            loadingquiz "History"
             historytrial
 
         when 'Geography'
-            sleep(2)
-            puts "\n\nTaking you to the Geography quiz. Please wait a moment."
-            sleep(3)
-            system 'clear'
+            loadingquiz "Geography"
             geographytrial
 
         when 'Literature and Philosophy'
-            sleep(2)
-            puts "\n\nTaking you to the Literature and Philosophy quiz. Please wait a moment."
-            sleep(3)
-            system 'clear'
+            loadingquiz "Literature and Philosophy"
             litandphilosophy
         
         when 'Exit'
@@ -45,5 +36,13 @@ def choosetopics
         end 
         puts "You have returned to the home menu."
 end 
+
+def loadingquiz (topic)
+    sleep(2)
+    puts "\n\nTaking you to the #{topic} quiz. Please wait a moment."
+    sleep(3)
+    system 'clear'
+end 
+
 
     choosetopics 
