@@ -1,7 +1,7 @@
 require "tty-prompt"
 require_relative "./answers.rb"
 
-def geographytrial
+def geographyquiz
         totalscore = []
         $prompt = TTY::Prompt.new
         puts "\n\n\n" + title + "\n\n\n"

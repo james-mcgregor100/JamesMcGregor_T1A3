@@ -1,7 +1,7 @@
 require 'colorize'
 require_relative "./answers.rb"
 
-def litandphilosophy
+def litandphilosophyquiz
         totalscore = []
         $prompt = TTY::Prompt.new
         question1 = 'The book "Heart of Darkness" written by Joseph Conrad was set in which African country?'

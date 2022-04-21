@@ -18,15 +18,15 @@ def choosetopics
     
         when 'History'
             loadingquiz "History"
-            historytrial
+            historyquiz
 
         when 'Geography'
             loadingquiz "Geography"
-            geographytrial
+            geographyquiz
 
         when 'Literature and Philosophy'
             loadingquiz "Literature and Philosophy"
-            litandphilosophy
+            litandphilosophyquiz
         
         when 'Exit'
             sleep(2)
