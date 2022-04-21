@@ -1,4 +1,5 @@
 require "tty-prompt"
+require_relative "./answers.rb"
 
 def geographytrial
         totalscore = []
@@ -16,11 +17,7 @@ def geographytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -39,11 +36,7 @@ def geographytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
     
         system 'clear'
@@ -62,11 +55,7 @@ def geographytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -85,11 +74,7 @@ def geographytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -108,11 +93,7 @@ def geographytrial
         puts "\nLoading next quesiton"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
         
         system 'clear'
@@ -131,11 +112,7 @@ def geographytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -156,8 +133,6 @@ def geographytrial
     else
         sleep(3)
         puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
         sleep(3)
     end 
         finishquiz

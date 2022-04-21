@@ -1,28 +1,10 @@
-class Quiz (introduction, question, answer, choices score)
-    @introduction = introduction 
-    @question = question
-    @answer = answer 
-    @choies = choices
-end 
-
-
-
-class Question << Quiz
-    def initialize (history, geography, politics, random)
-    @question: question
-    @history: history
-    @geography: geography
-    @politics: politics 
-    @random: random
-end 
-
 def wrong_answer
-    puts "You've entered the wrong answer!"
+    sleep(3)
+    puts "\nWrong answer."
+    sleep(3)
+    puts "\nLoading next question"
+    sleep(3)
 end 
-
-def correct_answer
-    puts "Congratulations. That is the correct answer!"
-end
 
 
 

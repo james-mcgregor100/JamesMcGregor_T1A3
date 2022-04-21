@@ -2,8 +2,10 @@ require "tty-prompt"
 require_relative "./main.rb"
 require "tty-progressbar"
 require_relative "./titles.rb"
+require_relative "./answers.rb"
 
 def historytrial
+
         totalscore = []
         histbook = []
         $prompt = TTY::Prompt.new
@@ -20,11 +22,7 @@ def historytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -43,11 +41,7 @@ def historytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -66,11 +60,7 @@ def historytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -89,11 +79,7 @@ def historytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -111,11 +97,7 @@ def historytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading net question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -134,11 +116,7 @@ def historytrial
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'

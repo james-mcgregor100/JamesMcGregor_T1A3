@@ -1,4 +1,5 @@
 require 'colorize'
+require_relative "./answers.rb"
 
 def litandphilosophy
         totalscore = []
@@ -15,11 +16,7 @@ def litandphilosophy
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
         system 'clear'
 
@@ -36,11 +33,7 @@ def litandphilosophy
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
         system 'clear'
 
@@ -57,11 +50,7 @@ def litandphilosophy
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -79,11 +68,7 @@ def litandphilosophy
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -101,11 +86,7 @@ def litandphilosophy
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -123,11 +104,7 @@ def litandphilosophy
         puts "\nLoading next question"
         sleep(3)
     else
-        sleep(3)
-        puts "\nWrong answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        wrong_answer
     end 
 
         system 'clear'
@@ -149,12 +126,4 @@ def litandphilosophy
         puts "\nWrong answer."
         sleep(3)
     end 
-
-
-
-
-
-
-
-
 end 
