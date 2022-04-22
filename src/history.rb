@@ -18,17 +18,14 @@ def historyquiz
     if answer == choices[1]
         sleep(3)
         totalscore << 1
-        puts "\nCorrect answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        correct_answer
+
     else
         histbook << 'You may want to read "The European Union (Politics and Policies)" by Jonathan Olsen to learn more about the European Union'
         wrong_answer
     end 
 
         system 'clear'
-
         $prompt = TTY::Prompt.new
         historytitle
         question2 = 'Mohammad Mosaddegh was the 35th Prime Minister of which country in the 1950s?'
@@ -38,10 +35,8 @@ def historyquiz
     if answer == choices[3]
         sleep(3)
         totalscore << 1
-        puts "\nCorrect answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        correct_answer
+
     else
         histbook << 'You may want to read the book titled "Mohammed Mosaddeq and the 1953 Coup in Iraq" by Mark Gasiorowski if you would like to learn more about Iranian political history.'
         wrong_answer
@@ -58,10 +53,8 @@ def historyquiz
     if answer == choices[3]
         sleep(3)
         totalscore <<1
-        puts "\nCorrect answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        correct_answer
+
     else
         histbook << 'Consider reading "Merchant Kings" by Stephen R. Bown to learn more about the Dutch East India Company.'
         wrong_answer
@@ -78,13 +71,13 @@ def historyquiz
     if answer == choices[2]
         sleep(3)
         totalscore << 1
-        puts "\nCorrect answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        correct_answer
+
     else
+
         histbook << '"Imperial Twilight" by Stephen R. Platt is a great book to read to understand more about the Opium Wars that occurred in China.'
         wrong_answer
+
     end 
 
         system 'clear'
@@ -94,13 +87,12 @@ def historyquiz
         question5 = 'The Pelopennesian War was fought betwen Athens and which other Ancient Greek state?'
         choices = %w(Corinth Sparta Sumera Peloppon)
         answer = $prompt.select(question5, choices, active_color: :yellow, help_color: :yellow)
+
     if answer == choices[1]
         sleep(3)
         totalscore << 1
-        puts "\nCorrect answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        correct_answer
+
     else
         histbook << 'The book titled "The History of the Pelopennesian War" by Thucydides is the perfect book to learn more about one of the most famous wars in history which is still studied today by political science scholars.'
         wrong_answer
@@ -117,10 +109,8 @@ def historyquiz
     if  answer == choices[2]
         sleep(3)
         totalscore << 1
-        puts "\nCorrect answer."
-        sleep(3)
-        puts "\nLoading next question"
-        sleep(3)
+        correct_answer
+        
     else
         histbook << "You would be able to fill in your gaps about Iraq's ancient history by reading 'Civilizations of Ancient Iraq' by Benjamin and Karen Foster."
         wrong_answer

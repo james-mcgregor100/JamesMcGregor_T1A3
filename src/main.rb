@@ -5,6 +5,8 @@ require 'colorize'
 require "tty-prompt"
 require "tty-progressbar"
 require_relative "./history.rb"
+require_relative "./geography.rb"
+require_relative "./litphil.rb"
 require_relative "./homemenu.rb"
 
 
