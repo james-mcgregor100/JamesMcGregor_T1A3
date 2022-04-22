@@ -17,6 +17,7 @@ def geographyquiz
         puts "\nLoading next question"
         sleep(3)
     else
+        histbook << 'To learn more about countries situated in the Horn of Africa you may want to read a book such as "The Horn of Africa: State Formation and Decay" by Christopher Clapham.'
         wrong_answer
     end 
 
@@ -36,6 +37,7 @@ def geographyquiz
         puts "\nLoading next question"
         sleep(3)
     else
+        histbook << '"Syria: A Modern History" by David W. Lesch would be a great starting point to increase your knowledge about Syrian history and politics.'
         wrong_answer
     end 
     
@@ -55,6 +57,7 @@ def geographyquiz
         puts "\nLoading next question"
         sleep(3)
     else
+        histbook << 'The perfect book to learn about Southeast Asian geography, and other important information would be the book titled "Southeast Asia: An Introductory History" written by Milton Osborne.'
         wrong_answer
     end 
 
@@ -74,6 +77,7 @@ def geographyquiz
         puts "\nLoading next question"
         sleep(3)
     else
+        histbook << 'To learn more about Japan, and Tokyo, we recommend reading "The Making of Modern Japan" by Marius B. Jansen.'
         wrong_answer
     end 
 
@@ -93,6 +97,7 @@ def geographyquiz
         puts "\nLoading next quesiton"
         sleep(3)
     else
+        histbook << "Lawrence Ziring's book titled 'Pakistan in the Twentieth Century' would be a great introductory book to learn more important geographical, political and historical information about Pakistan"
         wrong_answer
     end 
         
@@ -112,6 +117,7 @@ def geographyquiz
         puts "\nLoading next question"
         sleep(3)
     else
+        histbook << '"Historic Yosemite National Park" written by Tracey Salcedo is our recommendation for people wanting to improve their knowledge on the history of Yosemite National Park, and to understand its geographical importance in the state of California.'
         wrong_answer
     end 
 
@@ -132,6 +138,7 @@ def geographyquiz
         sleep(3)
     else
         sleep(3)
+        histbook << 'We recommend reading "Sacred Sea" written by Peter Thompson to understand the beauty and significance of Lake Baikal in Russia.'
         puts "\nWrong answer."
         sleep(3)
     end 
