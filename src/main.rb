@@ -4,7 +4,8 @@
 require 'colorize'
 require "tty-prompt"
 require "tty-progressbar"
-require_relative './history.rb'
+require_relative "./history.rb"
+require_relative "./homemenu.rb"
 
 
 def title
@@ -16,36 +17,106 @@ title = "\n\n
     ░░░██║░░░██║░░██║██║░░╚██╔╝░░██║██║░░██║    ██║░╚███║██║╚██████╔╝██║░░██║░░░██║░░░
     ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚═╝╚═╝░░╚═╝    ╚═╝░░╚══╝╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░\n\n".colorize(:light_blue)
 end 
-    sleep (2)
-    puts "\n\n\n" + title + "\n\n\n"
+
+require "tty-prompt"
+require_relative "./main.rb"
+
+def startupmenu
+    puts title
     sleep(2)
+    puts "\n\nGood evening!!!\n\n".red
+    sleep(4)
+    system 'clear'
+    puts title
+    puts "\n\nWelcome to Trivia Night.....\n\n".blue
+    sleep(4)
+    #sleep(3)
+    system 'clear'
+    puts title
+                        puts "WARNING:".red 
+    puts "\n\nTHIS APPLICATION IS ONLY FOR PEOPLE WHO ENJOY 
+PLAYING TRIVIA, OR FOR PEOPLE WHO ENJOY TESTING 
+THEIR KNOWLEDGE ON FUN AND INTERESTING TOPICS."
+    sleep(10)
+    system 'clear'
+    puts title
+    puts "\n\n"
+puts "People who are not interested in this, may want to leave.".blue 
+puts "\nSo if you are one of those people, you are free to leave now.".blue
+    sleep(4)
+    puts "\n\n"
+end 
 
-        
-        
-        
-        
-        
-#
-        #system 'clear'
-        #option = ""
-        #while option != "Exit"
-        #    option = select_option 
-        #    case option 
-        #    when "Play"
-        #    #instructions
-        #    when "Leave"
-        #    break
-        #    end 
-        #end 
+def stayorleave
+    prompt = TTY::Prompt.new
+    answer = prompt.select("Would you like to play or leave? Select below: ") do |menu|
+        menu.choice 'Play'
+        menu.choice 'Exit'
+    end 
+    
+    if answer == 'Play'
+        sleep (2)
+        puts "\n\nYou want to play? That's great!"
+        sleep(3)
+        puts "\n\nPlease wait while we load the trivia menu for you...."
+        sleep (4)
+        system'clear'
+    else
+        sleep(3)
+        puts "\n\nYou have chosen to exit the application. Goodbye for now ^_^."
+        sleep(3)
+        system 'clear'  
+        exit!
+    end 
+end 
 
+def topics
+    @availabletopics = ['History', 'Geography', 'Literature and Philosophy', 'Exit']
+    end 
+
+def choosetopics
+    puts title
+    prompt = TTY::Prompt.new 
+    topicchoice = prompt.select("Choose your trivia topic:", topics, active_color: :cyan, help_color:
+:cyan)
+
+    case topicchoice
+    
+        when 'History'
+            loadingquiz "History"
+            historyquiz
+            stayorleave
+
+        when 'Geography'
+            loadingquiz "Geography"
+            geographyquiz
+
+        when 'Literature and Philosophy'
+            loadingquiz "Literature and Philosophy"
+            litandphilosophyquiz
         
-#puts "What is your name?"
-#name = gets.chomp 
-#sleep(3)
-#system("clear")
-#puts name
+        when 'Exit'
+            sleep(2)
+            puts "\n\nTaking you back to the home page....."
+            sleep(3)
+            system 'clear'
+        end 
+        puts "You have returned to the home menu."
+end 
+
+def loadingquiz (topic)
+    sleep(3)
+    puts "\n\nTaking you to the #{topic} quiz. Please wait a moment...."
+    sleep(4)
+    system 'clear'
+end 
 
 
+    startupmenu
+    stayorleave
+    choosetopics
+
+    
 #prompt.keypress("Press SPACE or ENTER to continue", keys: [:space, :return])
 # I like this one ^^^^
 

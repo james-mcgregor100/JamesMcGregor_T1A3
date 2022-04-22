@@ -1,7 +1,7 @@
 require 'tty-prompt'
 require 'tty-progressbar'
 require 'colorize'
-#require_relative "./main.rb"
+require_relative "./main.rb"
 require_relative "./history.rb"
 require_relative "./geography.rb"
 require_relative "./litphil.rb"
@@ -11,6 +11,7 @@ def topics
 end 
 
 def choosetopics
+    puts title
     prompt = TTY::Prompt.new 
     topicchoice = prompt.select("Choose your trivia topic:",  topics, active_color: :cyan, help_color: :cyan)
 
@@ -19,6 +20,7 @@ def choosetopics
         when 'History'
             loadingquiz "History"
             historyquiz
+            stayorleave
 
         when 'Geography'
             loadingquiz "Geography"
@@ -43,6 +45,3 @@ def loadingquiz (topic)
     sleep(3)
     system 'clear'
 end 
-
-
-    choosetopics 
