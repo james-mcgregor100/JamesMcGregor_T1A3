@@ -34,7 +34,7 @@ def startupmenu
                         puts "WARNING:".red 
     puts "\n\nTHIS APPLICATION IS ONLY FOR PEOPLE WHO ENJOY 
 PLAYING TRIVIA, OR FOR PEOPLE WHO ENJOY TESTING 
-THEIR KNOWLEDGE ON FUN AND INTERESTING TOPICS."
+THEIR KNOWLEDGE ON INTERESTING AND CHALLENGING TOPICS."
     sleep(10)
     system 'clear'
     puts title
@@ -113,9 +113,14 @@ end
 
 def loadingquiz (topic)
     sleep(3)
-    puts "\n\nTaking you to the #{topic} quiz. Please wait a moment...."
-
-    sleep(6)
+    puts "\nTaking you to the #{topic} quiz. Please wait a moment....\n"
+    puts "\n"
+    bar = TTY::ProgressBar.new("Loading [:bar]", total: 30)
+    30.times do
+        sleep(0.2)
+        bar.advance(1)
+    end 
+    sleep(4)
     system 'clear'
 end 
 
