@@ -144,8 +144,14 @@ def litandphilosophyquiz
             system 'clear'
             booktitle
             sleep(3)
-            puts "Loading book recommendations.......\n".colorize(:red)
-            sleep(4)
+            puts "\n"
+            bar = TTY::ProgressBar.new("Loading Book Recommendations [:bar]", total: 30)
+            30.times do
+            sleep(0.05)
+            bar.advance(1)
+            end 
+            puts "\n\n"
+            sleep(3)
             histbook.each do |item|
             puts "- #{item}"
             puts "\n" 
