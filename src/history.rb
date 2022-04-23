@@ -3,7 +3,6 @@ require "tty-prompt"
 require "tty-progressbar"
 require_relative "./titles.rb"
 require_relative "./answers.rb"
-#require_relative "./homemenu.rb"
 
 def historyquiz
         totalscore = []
@@ -162,7 +161,7 @@ def historyquiz
             puts "\n" 
             sleep(3)
         end 
-        
+
         else  
         sleep(3)
         puts "Please wait while we take you back to the main menu...."

@@ -10,7 +10,6 @@ def startupmenu
     puts title
     puts "\n\nWelcome to Trivia Night.....\n\n".blue
     sleep(4)
-    #sleep(3)
     system 'clear'
     puts title
     puts "WARNING: THIS APPLICATION IS ONLY FOR PEOPLE WHO ENJOY 
