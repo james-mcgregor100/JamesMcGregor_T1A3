@@ -114,7 +114,8 @@ end
 def loadingquiz (topic)
     sleep(3)
     puts "\n\nTaking you to the #{topic} quiz. Please wait a moment...."
-    sleep(4)
+
+    sleep(6)
     system 'clear'
 end 
 
@@ -127,10 +128,9 @@ end
 #prompt.keypress("Press SPACE or ENTER to continue", keys: [:space, :return])
 # I like this one ^^^^
 
-#bar = TTY::ProgressBar.new("downloading [:bar]", total: 20)
-#
-#30.times do
-#    sleep(0.1)
-#    bar.advance
-#end 
-#
+bar = TTY::ProgressBar.new("downloading [:bar]", total: 20)
+
+30.times do
+    sleep(0.1)
+    bar.advance
+end 
