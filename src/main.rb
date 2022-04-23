@@ -75,6 +75,12 @@ def topics
 def choosetopics
     puts title
     puts "\n\nPlease wait while we load the trivia menu for you...."
+    puts "\n"
+    bar = TTY::ProgressBar.new("Loading [:bar]", total: 30)
+    30.times do
+    sleep(0.1)
+    bar.advance(1)
+    end 
     sleep (4)
     system'clear'
     puts title
@@ -128,14 +134,3 @@ end
     startupmenu
     stayorleave
     choosetopics
-
-    
-#prompt.keypress("Press SPACE or ENTER to continue", keys: [:space, :return])
-# I like this one ^^^^
-
-bar = TTY::ProgressBar.new("downloading [:bar]", total: 20)
-
-30.times do
-    sleep(0.1)
-    bar.advance
-end 
