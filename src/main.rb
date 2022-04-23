@@ -1,6 +1,7 @@
 require 'colorize'
 require "tty-prompt"
 require "tty-progressbar"
+require "tty-spinner"
 require_relative "./history.rb"
 require_relative "./geography.rb"
 require_relative "./litphil.rb"
@@ -121,12 +122,11 @@ def loadingquiz (topic)
     sleep(3)
     puts "\nTaking you to the #{topic} quiz. Please wait a moment....\n"
     puts "\n"
-    bar = TTY::ProgressBar.new("Loading [:bar]", total: 30)
-    30.times do
-        sleep(0.2)
-        bar.advance(1)
-    end 
-    sleep(4)
+    spinner = TTY::Spinner.new("[:spinner] Loading ...", format: :pulse_2)
+    spinner.auto_spin
+    sleep(5) 
+    spinner.stop
+    sleep(2)
     system 'clear'
 end 
 
