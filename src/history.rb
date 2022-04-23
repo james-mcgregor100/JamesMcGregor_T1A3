@@ -154,8 +154,14 @@ def historyquiz
             system 'clear'
             booktitle
             sleep(3)
-            puts "Loading book recommendations.......\n".colorize(:red)
-            sleep(4)
+            puts "\n"
+            bar = TTY::ProgressBar.new("Loading Book Recommendations [:bar]", total: 30)
+            30.times do
+            sleep(0.05)
+            bar.advance(1)
+            end 
+            puts "\n\n"
+            sleep(3)
             histbook.each do |item|
             puts "- #{item}"
             puts "\n" 
@@ -187,7 +193,13 @@ def finishhistory
     system 'clear'
     historytitle
     puts "Please wait while we calculate your results...."
-    sleep(5)
+    puts "\n"
+    bar = TTY::ProgressBar.new("Loading [:bar]", total: 30)
+    30.times do
+    sleep(0.05)
+    bar.advance(1)
+    end 
+    sleep(3)
     system 'clear'
 end 
 

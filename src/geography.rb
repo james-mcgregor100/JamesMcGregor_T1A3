@@ -195,7 +195,7 @@ def finishgeography
     30.times do
     sleep(0.05)
     bar.advance(1)
-end 
+    end 
     sleep(3)
     system 'clear'
 end 
