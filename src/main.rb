@@ -50,7 +50,7 @@ puts "\nSo if you are one of those people, you are free to leave now ^_^ "
 end 
 
 def stayorleave
-    puts title
+    #puts title
     prompt = TTY::Prompt.new
     answer = prompt.select("Would you like to play or leave? Select below: ") do |menu|
         menu.choice 'Play'
@@ -103,11 +103,12 @@ def choosetopics
             litandphilosophyquiz
             stayorleave
         
-        when 'Exit - Leave the application'
+        when 'Exit'
             sleep(2)
-            puts "\n\nTaking you back to the home page....."
-            sleep(3)
+            puts "\n\nYou selected to exit the application. We hope you return in the future. Goodbye ^_^"
+            sleep(5)
             system 'clear'
+            exit!
         end 
         sleep(1)
         system 'clear'

@@ -163,15 +163,16 @@ def historyquiz
         end 
         else  
         sleep(3)
-        puts "Taking you back to the home page......"
-        sleep(3)
+        puts "Please wait while we take you back to the home menu...."
+        sleep(4)
         end 
 
     else  
         sleep(3)
-        puts "Please wait while we take you back to the home menu"
-        sleep(3)
-    end    
+        puts "Please wait while we take you back to the home menu...."
+        sleep(4)
+    end
+    puts "You must decide whether to play another quiz, or leave the application\n".colorize(:red)
 end 
 
 def finishhistory
@@ -188,7 +189,6 @@ def finishhistory
 end 
 
 def bookrecommend
-    #$prompt = TTY::Prompt.new
     booktitle
     puts "Our quiz has discovered some gaps in your knowledge that could be easily filled in if you were to do some extra readings.\n\nBased on the answer/s you got incorrect, we have a list of books you may like to read to fill in the gaps.\n\n"
 end 

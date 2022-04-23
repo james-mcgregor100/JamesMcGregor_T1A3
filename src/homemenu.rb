@@ -33,11 +33,7 @@ def choosetopics
             stayorleave
         
         when 'Exit'
-            sleep(2)
-            puts "\n\nTaking you back to the home page......."
-            sleep(3)
-            system 'clear'
-        end 
+        end
 end 
 
 def loadingquiz (topic)
