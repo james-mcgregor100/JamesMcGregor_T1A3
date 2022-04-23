@@ -1,6 +1,3 @@
-#require_relative 'answers.rb'
-#require_relative "./welcome.rb"
-#require_relative 'instructions.rb'
 require 'colorize'
 require "tty-prompt"
 require "tty-progressbar"
