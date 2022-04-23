@@ -168,7 +168,7 @@ def historyquiz
         end 
 
     else  
-        sleep(3)
+        historytitle
         puts "Please wait while we take you back to the home menu...."
         sleep(4)
     end
