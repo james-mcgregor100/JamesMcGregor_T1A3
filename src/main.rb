@@ -44,13 +44,12 @@ THEIR KNOWLEDGE ON FUN AND INTERESTING TOPICS."
     puts "\n\n"
 puts "People who are not interested in playing trivia games may not enjoy this game, lol. " 
 puts "\nSo if you are one of those people, you are free to leave now ^_^ "
-    sleep(5)
+    sleep(6)
     puts "\n\n"
     system 'clear'
 end 
 
 def stayorleave
-    #puts title
     prompt = TTY::Prompt.new
     answer = prompt.select("Would you like to play or leave? Select below: ") do |menu|
         menu.choice 'Play'

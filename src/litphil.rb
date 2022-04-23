@@ -138,6 +138,7 @@ def litandphilosophyquiz
         choices = %w(Yes No)
         answer = $prompt.select(question, choices, active_color: :red, help_color: :red)
         puts "\n"
+
         if answer == 'Yes'
             sleep(3)
             system 'clear'
@@ -150,10 +151,12 @@ def litandphilosophyquiz
             puts "\n" 
             sleep(3)
         end 
+        
         else  
             sleep(3)
-            puts "Please wait while we take you back to the home menu...."
+            puts "Please wait while we take you back to the main menu...."
             sleep(4)
+            system 'clear'
         end 
 
     else  

@@ -149,6 +149,7 @@ def historyquiz
         choices = %w(Yes No)
         answer = $prompt.select(question, choices, active_color: :red, help_color: :red)
         puts "\n"
+
         if answer == 'Yes'
             sleep(3)
             system 'clear'
@@ -161,16 +162,19 @@ def historyquiz
             puts "\n" 
             sleep(3)
         end 
+        
         else  
         sleep(3)
-        puts "Please wait while we take you back to the home menu...."
+        puts "Please wait while we take you back to the main menu...."
         sleep(4)
+        system 'clear'
         end 
 
     else  
         historytitle
         puts "Please wait while we take you back to the home menu...."
         sleep(4)
+        system 'clear'
     end
     puts "You must decide whether to play another quiz, or leave the application\n".colorize(:red)
 end 

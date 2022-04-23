@@ -130,22 +130,65 @@ def geographyquiz
         puts "\nWrong answer."
         sleep(3)
     end 
-        finishquiz
+        finishgeography
         geographytitle
         puts "Your total score is #{totalscore.sum} out of 7"
         sleep (5)
         system 'clear'
+
+    if histbook.length > 0
+        bookrecommend
+        $prompt = TTY::Prompt.new
+        question = 'Would you like to view our book recommendations?'
+        choices = %w(Yes No)
+        answer = $prompt.select(question, choices, active_color: :red, help_color: :red)
+        puts "\n"
+
+        if answer == 'Yes'
+            sleep(3)
+            system 'clear'
+            booktitle
+            sleep(3)
+            puts "Loading book recommendations.......\n".colorize(:red)
+            sleep(4)
+            histbook.each do |item|
+            puts "- #{item}"
+            puts "\n" 
+            sleep(3)
+        end 
+
+        else  
+        sleep(3)
+        puts "Please wait while we take you back to the main menu...."
+        sleep(4)
+        system 'clear'
+        end 
+
+    else  
+        geographytitle
+        puts "Please wait while we take you back to the home menu...."
+        sleep(4)
+        system 'clear'
+    end
+    puts "You must decide whether to play another quiz, or leave the application\n".
+    colorize(:red)
+    
 end 
 
-def finishquiz
+def finishgeography
     system 'clear'
     geographytitle
     sleep(2)
-    puts "You have finished the quiz."
+    puts "Congratulations on finishing the quiz!"
     sleep (3)
     system 'clear'
     geographytitle
-    puts "Please wait while we calculate your results"
+    puts "Please wait while we calculate your results...."
     sleep(5)
     system 'clear'
+end 
+
+def bookrecommend
+    booktitle
+    puts "Our quiz has discovered some gaps in your knowledge that could be easily filled in if you were to do some extra readings.\n\nBased on the answer/s you got incorrect, we have a list of books you may like to read to fill in the gaps.\n\n"
 end 
