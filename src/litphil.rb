@@ -183,6 +183,13 @@ def finishphilosophy
     system 'clear'
     philosophy
     puts "Please wait while we calculate your results...."
+    puts "\n"
+    bar = TTY::ProgressBar.new("Loading [:bar]",
+    total: 30)
+    30.times do
+    sleep(0.05)
+    bar.advance(1)
+    end 
     sleep(5)
     system 'clear'
 end 
