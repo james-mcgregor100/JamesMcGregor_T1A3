@@ -1,4 +1,6 @@
 require 'colorize'
+require "tty-prompt"
+require "tty-progressbar"
 require_relative "./answers.rb"
 require_relative "./titles.rb"
 
@@ -122,4 +124,66 @@ def litandphilosophyquiz
         puts "\nWrong answer."
         sleep(3)
     end 
+
+        finishphilosophy
+        philosophy
+        puts "Your total score is #{totalscore.sum} out of 7"
+        sleep(5) 
+        system 'clear'
+
+    if histbook.length > 0
+        bookrecommend
+        $prompt = TTY::Prompt.new
+        question = 'Would you like to view our book recommendations?'
+        choices = %w(Yes No)
+        answer = $prompt.select(question, choices, active_color: :red, help_color: :red)
+        puts "\n"
+        if answer == 'Yes'
+            sleep(3)
+            system 'clear'
+            booktitle
+            sleep(3)
+            puts "Loading book recommendations.......\n".colorize(:red)
+            sleep(4)
+            histbook.each do |item|
+            puts "- #{item}"
+            puts "\n" 
+            sleep(3)
+        end 
+        else  
+        sleep(3)
+        puts "Taking you back to the home page......"
+        sleep(3)
+        end 
+
+    else  
+        sleep(3)
+        puts "Please wait while we take you back to the home menu"
+        sleep(3)
+    end    
 end 
+
+def finishphilosophy
+    system 'clear'
+    philosophy
+    sleep(2)
+    puts "Congratulations on finishing the quiz!"
+    sleep (3)
+    system 'clear'
+    philosophy
+    puts "Please wait while we calculate your results...."
+    sleep(5)
+    system 'clear'
+end 
+
+def bookrecommend
+    $prompt = TTY::Prompt.new
+    puts "\n\n"
+    booktitle
+    puts "\n\n"
+    puts "Our quiz has discovered some gaps in your knowledge that could be easily filled in if you were to do some extra readings.\n\nBased on the answer/s you got incorrect, we have a list of books you may like to read to fill in the gaps.\n\n"
+end 
+
+
+
+

@@ -32,7 +32,6 @@ def startupmenu
     puts title
     puts "\n\nWelcome to Trivia Night.....\n\n".blue
     sleep(4)
-    #sleep(3)
     system 'clear'
     puts title
                         puts "WARNING:".red 
@@ -43,13 +42,15 @@ THEIR KNOWLEDGE ON FUN AND INTERESTING TOPICS."
     system 'clear'
     puts title
     puts "\n\n"
-puts "People who are not interested in this, may want to leave.".blue 
-puts "\nSo if you are one of those people, you are free to leave now.".blue
-    sleep(4)
+puts "People who are not interested in playing trivia games may not enjoy this game, lol. " 
+puts "\nSo if you are one of those people, you are free to leave now ^_^ "
+    sleep(5)
     puts "\n\n"
+    system 'clear'
 end 
 
 def stayorleave
+    puts title
     prompt = TTY::Prompt.new
     answer = prompt.select("Would you like to play or leave? Select below: ") do |menu|
         menu.choice 'Play'
@@ -60,13 +61,12 @@ def stayorleave
         sleep (2)
         puts "\n\nYou want to play? That's great!"
         sleep(3)
-        puts "\n\nPlease wait while we load the trivia menu for you...."
-        sleep (4)
-        system'clear'
+        system 'clear'
+
     else
         sleep(3)
         puts "\n\nYou have chosen to exit the application. Goodbye for now ^_^."
-        sleep(3)
+        sleep(5)
         system 'clear'  
         exit!
     end 
@@ -77,6 +77,10 @@ def topics
     end 
 
 def choosetopics
+    puts title
+    puts "\n\nPlease wait while we load the trivia menu for you...."
+    sleep (4)
+    system'clear'
     puts title
     prompt = TTY::Prompt.new 
     topicchoice = prompt.select("Choose your trivia topic:", topics, active_color: :cyan, help_color:
@@ -92,18 +96,22 @@ def choosetopics
         when 'Geography'
             loadingquiz "Geography"
             geographyquiz
+            stayorleave
 
         when 'Literature and Philosophy'
             loadingquiz "Literature and Philosophy"
             litandphilosophyquiz
+            stayorleave
         
-        when 'Exit'
+        when 'Exit - Leave the application'
             sleep(2)
             puts "\n\nTaking you back to the home page....."
             sleep(3)
             system 'clear'
         end 
-        puts "You have returned to the home menu."
+        sleep(1)
+        system 'clear'
+        choosetopics
 end 
 
 def loadingquiz (topic)

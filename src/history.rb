@@ -21,7 +21,7 @@ def historyquiz
         correct_answer
 
     else
-        histbook << 'You may want to read "The European Union (Politics and Policies)" by Jonathan Olsen to learn more about the European Union'
+        histbook << 'You may want to read "The European Union (Politics and Policies)" by Jonathan Olsen to learn more about the European Union.'
         wrong_answer
     end 
 
@@ -136,7 +136,7 @@ def historyquiz
         sleep(3)
     end
 
-        finishquiz
+        finishhistory
         historytitle
         puts "Your total score is #{totalscore.sum} out of 7"
         sleep(5) 
@@ -174,23 +174,21 @@ def historyquiz
     end    
 end 
 
-def finishquiz
+def finishhistory
     system 'clear'
     historytitle
     sleep(2)
-    puts "You have finished the quiz."
+    puts "Congratulations on finishing the quiz!"
     sleep (3)
     system 'clear'
     historytitle
-    puts "Please wait while we calculate your results"
+    puts "Please wait while we calculate your results...."
     sleep(5)
     system 'clear'
 end 
 
 def bookrecommend
-    $prompt = TTY::Prompt.new
-    puts "\n\n\n"
+    #$prompt = TTY::Prompt.new
     booktitle
-    puts "\n\n\n"
     puts "Our quiz has discovered some gaps in your knowledge that could be easily filled in if you were to do some extra readings.\n\nBased on the answer/s you got incorrect, we have a list of books you may like to read to fill in the gaps.\n\n"
 end 

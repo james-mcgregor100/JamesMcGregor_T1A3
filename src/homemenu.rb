@@ -25,10 +25,12 @@ def choosetopics
         when 'Geography'
             loadingquiz "Geography"
             geographyquiz
+            stayorleave
 
         when 'Literature and Philosophy'
             loadingquiz "Literature and Philosophy"
             litandphilosophyquiz
+            stayorleave
         
         when 'Exit'
             sleep(2)
@@ -36,7 +38,6 @@ def choosetopics
             sleep(3)
             system 'clear'
         end 
-        puts "You have returned to the home menu."
 end 
 
 def loadingquiz (topic)
