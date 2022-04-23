@@ -4,7 +4,7 @@ require_relative "./main.rb"
 def startupmenu
     puts title
     sleep(2)
-    puts "\n\nGood evening!!!\n\n".red
+    puts "\n\nGood evening!!!\n\n".blue
     sleep(4)
     system 'clear'
     puts title
@@ -21,7 +21,7 @@ def startupmenu
     puts title
     puts "\n\n"
     puts "People who are not interested in this, may want to leave. 
-So if you are one of those people, you a free to leave now.".blue
+So if you are one of those people, you a free to leave now ^_^.".blue
     sleep(3)
     puts "\n\n"
 
