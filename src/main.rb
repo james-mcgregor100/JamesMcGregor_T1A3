@@ -72,7 +72,7 @@ end
 
 def topics
     @availabletopics = ['History', 'Geography', 'Literature and Philosophy', 'Exit']
-    end 
+end 
 
 def choosetopics
     puts title
@@ -115,7 +115,7 @@ def choosetopics
             system 'clear'
             exit!
     end 
-    
+
         sleep(1)
         system 'clear'
         choosetopics
