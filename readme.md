@@ -148,11 +148,17 @@ If the user selects the wrong answer, the 'else' part of the 'If Statement' will
 
 ### Feature 3 - Use of Variables 
 
+#### Example 1 - Variable
+
 ```ruby 
 def topics
     @availabletopics = ['History', 'Geography', 'Literature and Philosophy', 'Exit']
 end 
 ```
+
+In Example 1 above, I used the variable 'availabletopics' to store the names of the menu choices for when the user arrived at the main menu in the application. When the user arrives at the main menu in the application, the 'availabletopics' variable was called, instead of having to write out each individual menu choice one by one. 
+
+#### Example 2 - Variable
 
 ```ruby 
 def title
@@ -167,7 +173,37 @@ title = "\n\n
 end 
 ```
 
+In Example 2 above, I used the 'title' variable to store the "Trivia Night" heading. I used this in a variable, and then also a method, to be able to call on this heading at various points throughout the application. This allowed for me to keep the big sized ascii text heading stored in a separate .rb file, and I was able to call on the variable/method when I needed to use the title. If I had to copy and paste the whole text art of "Trivia Night" throughout the program every time it was used, the code would look very 'unclean' and it would be unnecessary. Therefore, a decision was made to store it in a variable to keep the code cleaner and to reduce the amount of lines needed.
 
+#### Example 3 - Variable 
+
+```ruby
+def historyquiz
+    totalscore = []
+    histbook = []
+``` 
+
+In Example 3 above, the 'totalscore' and 'histbook' variables were used to store important information into arrays. This allowed me to have control over how the data would be retrieved towards the end of the application when the total score needed to be displayed to the user, and also when the various book recommendations needed to be given to the user. Without using the 'totalscare' and 'histbook' variables in the application, the process of storing, counting, and retrieving the data throughout the application would have been more difficult. 
+
+
+#### Example 4 - Variable 
+
+```ruby 
+     choices = %w(Somalia Mali Nigeria Liberia)
+     answer = $prompt.select(question1, choices, active_color: :green, help_color: :green)
+ 
+ if answer == choices[0]
+     sleep(3)
+     totalscore << 1
+     correct_answer
+ else
+     histbook << 'To learn more about countries situated in the Horn of Africa you may want to read a book
+such as "The Horn of Africa: State Formation and Decay" by Christopher Clapham.'
+     wrong_answer
+ end 
+ ``` 
+
+In the example above, the there are two variables being used inconjunction with each other. The 'choices' and 'answer' variables are used together ones the conditional 'If' statement is executed in the code. The 'choices' is printed out for the user to select from to answer the quiz, and the user's answer is taken in as input through the 'answer' variable. The 'If' statement tests the user's answer in 'answer' against the predetermined index position of the correct answer, which in this specific question, the correct answer is placed at index position [0], or 'Somalia'. It was decided that variables were a perfect choice for executing this part of the program. Firstly, because the data was conveniently stored in an array, and secondly, by putting the answers in specific index positions, and setting the answer to a specific index position, the program is able to determine if the user has answered correctly or not. 
 
 ## Implementation Plan - R7
 
