@@ -5,7 +5,6 @@ require_relative "./titles.rb"
 require_relative "./answers.rb"
 
 def historyquiz
-        
     totalscore = []
     histbook = []
     $prompt = TTY::Prompt.new

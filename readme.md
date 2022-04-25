@@ -35,7 +35,19 @@ https://github.com/james-mcgregor100/JamesMcGregor_T1A3
 
 # Code Style Guide and Styling Conventions - R5
 
-## List of Features Used in Application - R6
+While writing the code for this application I attempted to adhere to AirBnb's Ruby Style Guide as much as possible. Unfortunately, there are still some areas of the code in this application that will be incorrect and considered 'bad' by AirBnb's metrics. However, I attempted to ensure that I follow the instructions set out, where possible. A lot of Ruby's Style Guide did not apply to my application, as my application did not use many of the code examples found in the Style Guide, however, I did try to use the code examples in the Style Guide that which were related to the code in my project. 
+
+The documentation for AirBnb's Style Guide can be found here - https://github.com/airbnb/ruby 
+
+My application used three basic styling recommendations found in AirBnb's Guide, which included - 
+
+1. When there are logical breaks in the code, make sure to put a space between the lines of code to allow for better readability. 
+
+2. Unless there are really tricky parts of code that is not easily understood, there is no need to describe the code. Always assume that the person reason the code is a lot better at using the code than you are. So they should be able to easily understand what's happening when reading your code. 
+   
+3. Make sure to put line breaks after and 'end'. Do not start another line of code directly after the 'end' found at the end of a conditional control structure, a method, a class, or when iterating over an array or hash. 
+
+# List of Features Used in Application - R6
 ### Feature 1 - Using TTY Prompt for Error Handling
 When deciding how to create an application which would minimize and mitigate input errors occuring, I did not know how I was going to use error handling with standard input statements, such as ```ruby gets.chomp```. I found that there were too many ways that a user would break the application when using ```ruby gets.chomp```, and instead decided to opt for using the TTY Prompt. I felt that the TTY Prompt was the best way to ensure error handling was taken care of when a user needed to interact with the application and provide input. The TTY Prompt forces the user to select only the input choices that the program provides them. Seeing as this application requires the user to interact throughout many stages of the application, the TTYPrompt worked well to reduce errors occuring. 
 
@@ -153,32 +165,30 @@ insert trello board here
 
 3. You must then clone this Github repository to a folder on your computer. Please go to this Github link - https://github.com/james-mcgregor100/JamesMcGregor_T1A3 
 
-Once you have opened the link, you will see a green button which says "Code". Please click on that to clone the repository. If you can't find the "Code" button, you can copy and past this repo -> ```ruby git@github.com:james-mcgregor100/JamesMcGregor_T1A3.git```
+Once you have opened the link, you will see a green button which says "Code". Please click on that to clone the repository. If you can't find the "Code" button, you can copy and past this repo -> ```git@github.com:james-mcgregor100/JamesMcGregor_T1A3.git```
 
 4. After cloning the repo, please open up your Terminal on your computer. 
 
-5. Move to the directory named 'src'. 
+5. Move to the directory named ```/src```. 
    
 6. Run the bash script to open the application. The bash script must be written exactly as follows - 
 
-```ruby ./run_app.sh```
+```./run_app.sh```
 
 This will run the application, and also install the required gems which are used throughout the program. The gems that will be installed are - 
 
-```ruby gem "colorize", "~> 0.8.1"```
+```gem "colorize", "~> 0.8.1"```
 
-```ruby gem "tty-prompt"```
+```gem "tty-prompt"```
 
-```ruby gem "tty-progressbar", "~> 0.18.2"```
+```gem "tty-progressbar", "~> 0.18.2"```
 
-```ruby gem "tty-spinner"```
+```gem "tty-spinner"```
 
 This script should work perfectly, however, if you are having problems running the bash script above, you might need to allow the script to be executable. If the script is NOT working, please enter this into the command line, before trying to run the script again - 
 
-```ruby chmod +x run_app.sh```
+```chmod +x run_app.sh```
 
-
-### Dependencies Required
 
 ### System/Hardware Requirements 
 
@@ -188,7 +198,7 @@ The program was created using Ruby version 2.7.1. It is not gauranteed that this
 
 ### How to Use Command Line Arguments 
 
-The comman line argument will run automatically when the application is open. A simple message will be 
+The comman line argument will run automatically when the application is open. A simple message will be displayed onced the user opens the application.
 
 # Extra Information
 Unfortunately due to time constraints I was not able to implement everything in the application that I would have liked to. Initially I had ideas of also adding in two extra menu options to play two extra games. One game was a simple tic tac toe game, and the other one was scissors, paper, rock. However, Initially I started to create the logic for the scissors, paper, rock game, and also tic tac toe, but I was unable to finish creating them, and had to just settle for making the basic trivia game. 
