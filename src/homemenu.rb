@@ -33,6 +33,7 @@ def choosetopics
             stayorleave
         
         when 'Exit'
+
         end
 end 
 
@@ -42,4 +43,5 @@ def loadingquiz (topic)
     
     sleep(3)
     system 'clear'
+
 end 

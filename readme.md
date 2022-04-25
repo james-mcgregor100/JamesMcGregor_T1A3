@@ -64,15 +64,24 @@ insert trello board here
 
 Once you have opened the link, you will see a green button which says "Code". Please click on that to clone the repository. If you can't find the "Code" button, you can copy and past this repo -> git@github.com:james-mcgregor100/JamesMcGregor_T1A3.git 
 
-4. Make sure you have Bundler installed. This will allow you to download and use Ruby gems. 
+4. After cloning the repo, please open up your Terminal on your computer. 
+
+5. Move to the directory named 'src'. 
    
-   If you haven't got Bundler installed, you can type in - 
+6. Run the bash script to open the application. The bash script must be written exactly as follows - 
 
-   ```ruby gem install bundler```
+```ruby ./run_app.sh```
 
-5. Once you have installed the Bundler Gem, you will need to install the specific Ruby gems. In order to do this you must ty
+This will run the application, and also install the required gems which are used throughout the program. The gems that will be installed are - 
 
-6. 
+gem "colorize", "~> 0.8.1"
+
+gem "tty-prompt"
+
+gem "tty-progressbar", "~> 0.18.2"
+
+gem "tty-spinner"
+
 
 ### Dependencies Required
 
@@ -80,4 +89,11 @@ Once you have opened the link, you will see a green button which says "Code". Pl
 
 ### How to Use Command Line Arguments 
 
+The application should now run when using the bash script. 
+
+
+# Extra Information
+Unfortunately due to time constraints I was not able to implement everything in the application that I would have liked to. Initially I had ideas of also adding in two extra menu options to play two extra games. One game was a simple tic tac toe game, and the other one was scissors, paper, rock. However, Initially I started to create the logic for the scissors, paper, rock game, and also tic tac toe, but I was unable to finish creating them, and had to just settle for making the basic trivia game. 
+
+In the future I would like to make some improvements to the game. Firstly I would like to increase the length of each quiz, and make each quiz get progressively more difficult as user moves through the questions. This would add more complexity to the application and make the user experience more exciting. Moreover, I would like to create either a YAML or TXT file with hundreds or thousands of questions (and related answers) so that the application can pull random questions from the YAML or TXT files each time a quiz is loaded. Initially I began to experiment using a YAML file to store the questions and answers for the application, but I was unable to make the application work correctly using correct logic. Therefore, in the future I would like to increase the complexity of the application by integrating the use of a YAML or TXT file.
 
