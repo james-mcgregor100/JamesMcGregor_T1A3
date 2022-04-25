@@ -130,6 +130,7 @@ def geographyquiz
         puts "\nWrong answer."
         sleep(3)
     end 
+
         finishgeography
         geographytitle
         puts "Your total score is #{totalscore.sum} out of 7"
@@ -155,6 +156,7 @@ def geographyquiz
             sleep(0.05)
             bar.advance(1)
             end 
+
             puts "\n\n"
             sleep(3)
             histbook.each do |item|
@@ -164,10 +166,10 @@ def geographyquiz
         end 
 
         else  
-        sleep(3)
-        puts "Please wait while we take you back to the main menu...."
-        sleep(4)
-        system 'clear'
+            sleep(3)
+            puts "Please wait while we take you back to the main menu...."
+            sleep(4)
+            system 'clear'
         end 
 
     else  
@@ -176,6 +178,7 @@ def geographyquiz
         sleep(4)
         system 'clear'
     end
+
     puts "You must decide whether to play another quiz, or leave the application\n".
     colorize(:red)
     
@@ -196,6 +199,7 @@ def finishgeography
     sleep(0.05)
     bar.advance(1)
     end 
+
     sleep(3)
     system 'clear'
 end 

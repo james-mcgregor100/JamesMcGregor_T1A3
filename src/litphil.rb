@@ -21,6 +21,7 @@ def litandphilosophyquiz
         histbook << 'We recommend going straight to the primary source and reading "The Heart of Darkness" by Joseph Conrad to gain a better understanding of the history of imperialism and colonialism in the Congo.'
         wrong_answer
     end 
+
         system 'clear'
 
         $prompt = TTY::Prompt.new
@@ -37,6 +38,7 @@ def litandphilosophyquiz
         histbook << "'The Portable Nietzsche' by Walter Kaufmann is a great appetizer for anyone wanting to learn more about Nietzsche's philosophy and his famous ideas." 
         wrong_answer
     end 
+
         system 'clear'
 
         $prompt = TTY::Prompt.new
@@ -171,6 +173,7 @@ def litandphilosophyquiz
         sleep(4)
         system 'clear'
     end    
+    
     puts "You must decide whether to play another quiz, or leave the application\n".colorize(:red)
 end 
 

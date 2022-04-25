@@ -67,7 +67,7 @@ def stayorleave
         system 'clear'  
         exit!
     end 
-    
+
 end 
 
 def topics
@@ -114,7 +114,8 @@ def choosetopics
             sleep(5)
             system 'clear'
             exit!
-        end 
+    end 
+    
         sleep(1)
         system 'clear'
         choosetopics

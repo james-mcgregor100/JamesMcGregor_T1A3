@@ -66,20 +66,78 @@ learn more about the European Union.'
 end 
 ``` 
 
+Example 1 above ensures that the user is forced to choose between four choices when answerin the question in the quiz. They are not allowed to type in an answer of their choice, rather TTY Prompt forces the user (and thus reduces the chance of errors occuring) to choose between the options provided. The TTY Prompt is effective in this situation because there are a range of errors that could occur when the user is entering in the choices. This keeps the quiz tightly controlled and keeps the user within a framework of how they can answer the question, and prevents them from typing in simple errors into the input section.
+
 #### Example 2 - Error Handling With TTY Prompt
 
-```ruby $prompt = TTY::Prompt.new
+```ruby 
+$prompt = TTY::Prompt.new
 question = 'Would you like to view our book recommendations?'
 choices = %w(Yes No)
 answer = $prompt.select(question, choices, active_color: :red, help_color: :red)
 ``` 
 
+Example 2 above is used in a different part of the application compared to Example 1. Example 2 is used to provide 'yes' or 'no' input. The TTY Prompt is effective in handling errors for this situation as the user could type in a large variation of answers to give answers to 'Yes' or 'No'. For example, the user may simply want to type in 'Y' or 'N' for the answer, which would throw an error. Similarly, the user may type in 'y' and 'n', or they may type in 'yesss' or 'noooo' to give their answer, which would definitely throw an error. Therefore, a decision was made to use TTY Prompt to try and avoid this kind of problem.
 
-### Feature 2
+### Feature 2 - Conditional Control Structure 
 
-### Feature 3
+#### Example 1 - Case Statement
 
-### Feature 4
+```ruby 
+    prompt = TTY::Prompt.new 
+    topicchoice = prompt.select("Choose your trivia topic:", topics, active_color: :cyan, help_color:
+:cyan)
+
+    case topicchoice
+    
+        when 'History'
+            loadingquiz "History"
+            historyquiz
+            stayorleave
+
+        when 'Geography'
+            loadingquiz "Geography"
+            geographyquiz
+            stayorleave
+
+        when 'Literature and Philosophy'
+            loadingquiz "Literature and Philosophy"
+            litandphilosophyquiz
+            stayorleave
+        
+        when 'Exit'
+            sleep(2)
+            puts "\n\nYou selected to exit the application. We hope you return in the future. Goodbye ^_^"
+            sleep(5)
+            system 'clear'
+            exit!
+    end 
+```
+In Example 1 above, a 'Case Statement' was used as a control structure for when the user was required to choose between a list of quiz topics. The case statement in this example above ensurs that the user is forced onto the next step in the program, whether it be 'loading' the quiz after 'History' is chosen, or if the user is asked if they wish to 'stay or leave' after the 'history quiz' has been completed. The Case Statement in this example has worked perfectly for this application, and is considered to be one of the foundational control structures used to hold the application together. 
+
+#### Example 2 - If Statement
+
+```ruby 
+if  answer == choices[2]
+    sleep(3)
+    totalscore << 1
+    correct_answer
+    
+else
+    histbook << "You would be able to fill in your gaps about Iraq's ancient history by reading
+'Civilizations of Ancient Iraq' by Benjamin and Karen Foster."
+    wrong_answer
+end 
+``` 
+In Example 2 above, a simple 'If Statement' has been used to control the way the program accepts user input while the quiz is being played by the user. This 'If Statement' checks whether the uses answer is exactly the same as the element in the 'choices' array located in index position '2'. If it is, the program will add a score of 1 point to the array called 'totalscore' and it will execute a method titled 'correct_answer'. This effectively controls what happens in the program once the user selects a correct answer whilst playing the quiz. The code that is run in the 'If' section is very important as it allows the program to record and store the points of the user. This will be used later on in the game once the user has finished playing the quiz.
+
+If the user selects the wrong answer, the 'else' part of the 'If Statement' will be executed, and the program will add the long string (seen above) which is a book recommendation, into the array titled 'histbook'. This 'else' part of the control structure is very important in the context of this quiz as it tells the program that the user is answering questions incorrectly, and it will need to provide book recommendations for the user at the end of the quiz. Therefore, as each question is answered incorrectly, the program is ordered to execute the long string to be put into the array. Similar to the 'total score' data, the 'histbook' data will also be stored and retrieved later on when the user finishes playing the quiz. 
+
+
+### Feature 3 - Use of Variables 
+
+
+
 
 ## Implementation Plan - R7
 
@@ -115,15 +173,22 @@ This will run the application, and also install the required gems which are used
 
 ```ruby gem "tty-spinner"```
 
+This script should work perfectly, however, if you are having problems running the bash script above, you might need to allow the script to be executable. If the script is NOT working, please enter this into the command line, before trying to run the script again - 
+
+```ruby chmod +x run_app.sh```
+
 
 ### Dependencies Required
 
 ### System/Hardware Requirements 
 
+This program should run on most modern computers without any problem.
+
+The program was created using Ruby version 2.7.1. It is not gauranteed that this app will run on other versions of Ruby. 
+
 ### How to Use Command Line Arguments 
 
-The application should now run when using the bash script. 
-
+The comman line argument will run automatically when the application is open. A simple message will be 
 
 # Extra Information
 Unfortunately due to time constraints I was not able to implement everything in the application that I would have liked to. Initially I had ideas of also adding in two extra menu options to play two extra games. One game was a simple tic tac toe game, and the other one was scissors, paper, rock. However, Initially I started to create the logic for the scissors, paper, rock game, and also tic tac toe, but I was unable to finish creating them, and had to just settle for making the basic trivia game. 

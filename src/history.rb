@@ -165,13 +165,13 @@ def historyquiz
             puts "- #{item}"
             puts "\n" 
             sleep(3)
-        end 
+            end 
 
         else  
-        sleep(3)
-        puts "Please wait while we take you back to the main menu...."
-        sleep(4)
-        system 'clear'
+            sleep(3)
+            puts "Please wait while we take you back to the main menu...."
+            sleep(4)
+            system 'clear'
         end 
 
     else  
@@ -180,6 +180,7 @@ def historyquiz
         sleep(4)
         system 'clear'
     end
+
     puts "You must decide whether to play another quiz, or leave the application\n".colorize(:red)
 end 
 
@@ -198,6 +199,7 @@ def finishhistory
     sleep(0.05)
     bar.advance(1)
     end 
+
     sleep(3)
     system 'clear'
 end 
