@@ -229,7 +229,9 @@ Once you have opened the link, you will see a green button which says "Code". Pl
 
 ```./run_app.sh```
 
-This will run the application, and also install the required gems which are used throughout the program. The gems that will be installed are - 
+### Dependencies 
+
+This will run the application, and also install the required gems which are used throughout the program. The gems that will be installed and used in this application are - 
 
 ```gem "colorize", "~> 0.8.1"```
 
@@ -252,7 +254,9 @@ The program was created using Ruby version 2.7.1. It is not gauranteed that this
 
 ### How to Use Command Line Arguments 
 
-The comman line argument will run automatically when the application is open. A simple message will be displayed onced the user opens the application.
+Unfortunately, the command line argument only seems to be working when the program is run from the normal ```ruby main.rb``` file. When the program is run using the bash script ```./run_app.sh``` the command line argument does not seem to get executed. So if you would like to view the command line argument please feel free to run the ```ruby main.rb``` file. In order for the command line argument to run, please enter your name after the ```ruby main.rb``` file. I have provided an example below. Change the name 'James' for your own name - 
+
+```ruby main.rb James``` 
 
 # Extra Information
 Unfortunately due to time constraints I was not able to implement everything in the application that I would have liked to. Initially I had ideas of also adding in two extra menu options to play two extra games. One game was a simple tic tac toe game, and the other one was scissors, paper, rock. However, Initially I started to create the logic for the scissors, paper, rock game, and also tic tac toe, but I was unable to finish creating them, and had to just settle for making the basic trivia game. 
