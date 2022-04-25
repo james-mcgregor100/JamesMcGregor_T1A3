@@ -67,6 +67,7 @@ def stayorleave
         system 'clear'  
         exit!
     end 
+    
 end 
 
 def topics
@@ -82,6 +83,7 @@ def choosetopics
     sleep(0.1)
     bar.advance(1)
     end 
+
     sleep (4)
     system'clear'
     puts title
@@ -141,6 +143,7 @@ def argument
     sleep(5)
     system 'clear'
 end 
+
     argument
     startupmenu
     stayorleave

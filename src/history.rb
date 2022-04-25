@@ -6,7 +6,7 @@ require_relative "./answers.rb"
 
 def historyquiz
         
-    ```ruby totalscore = []
+    totalscore = []
     histbook = []
     $prompt = TTY::Prompt.new
     historytitle
@@ -24,7 +24,6 @@ def historyquiz
         histbook << 'You may want to read "The European Union (Politics and Policies)" by Jonathan Olsen to learn more about the European Union.'
         wrong_answer
     end 
-    ```
 
         system 'clear'
         $prompt = TTY::Prompt.new
@@ -75,10 +74,8 @@ def historyquiz
         correct_answer
 
     else
-
         histbook << '"Imperial Twilight" by Stephen R. Platt is a great book to read to understand more about the Opium Wars that occurred in China.'
         wrong_answer
-
     end 
 
         system 'clear'

@@ -41,7 +41,11 @@ When deciding how to create an application which would minimize and mitigate inp
 
 Below is a code snippet from some of the TTY Prompts used as a 'feature' throughout the application - 
 
-```ruby totalscore = []
+
+#### Example 1 - Error Handling With TTY Prompt
+
+```ruby 
+totalscore = []
 histbook = []
 $prompt = TTY::Prompt.new
 historytitle
@@ -49,10 +53,12 @@ question1 = 'In what year was the European Union formed?'
 puts "\n\n"
 choices = %w(1917 1993 1945 1905)
 answer = $prompt.select(question1, choices, active_color: :yellow, help_color: :yellow)
+
 if answer == choices[1]
     sleep(3)
     totalscore << 1
     correct_answer
+
 else
     histbook << 'You may want to read "The European Union (Politics and Policies)" by Jonathan Olsen to 
 learn more about the European Union.'
@@ -60,7 +66,13 @@ learn more about the European Union.'
 end 
 ``` 
 
+#### Example 2 - Error Handling With TTY Prompt
 
+```ruby $prompt = TTY::Prompt.new
+question = 'Would you like to view our book recommendations?'
+choices = %w(Yes No)
+answer = $prompt.select(question, choices, active_color: :red, help_color: :red)
+``` 
 
 
 ### Feature 2
