@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 source "https://rubygems.org"
 
 # gem "rails"
@@ -11,3 +10,4 @@ gem "tty-prompt"
 gem "tty-progressbar", "~> 0.18.2"
 
 gem "tty-spinner"
+

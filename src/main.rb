@@ -130,6 +130,18 @@ def loadingquiz (topic)
     system 'clear'
 end 
 
+def argument
+    app = "Trivia Night"
+    name = "Old Friend"
+    app = ARGV[0] if ARGV[0]
+    name = ARGV[1] if ARGV[1]
+    puts "Welcome #{name}."
+    sleep(3)
+    puts "This app is called #{app}. We love playing trivia, and we hope you enjoy playing it too."
+    sleep(5)
+    system 'clear'
+end 
+    argument
     startupmenu
     stayorleave
     choosetopics
