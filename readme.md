@@ -39,6 +39,27 @@ https://github.com/james-mcgregor100/JamesMcGregor_T1A3
 ### Feature 1 - Using TTY Prompt for Error Handling
 When deciding how to create an application which would minimize and mitigate input errors occuring, I did not know how I was going to use error handling with standard input statements, such as ```ruby gets.chomp```. I found that there were too many ways that a user would break the application when using ```ruby gets.chomp```, and instead decided to opt for using the TTY Prompt. I felt that the TTY Prompt was the best way to ensure error handling was taken care of when a user needed to interact with the application and provide input. The TTY Prompt forces the user to select only the input choices that the program provides them. Seeing as this application requires the user to interact throughout many stages of the application, the TTYPrompt worked well to reduce errors occuring. 
 
+Below is a code snippet from some of the TTY Prompts used as a 'feature' throughout the application - 
+
+```ruby totalscore = []
+histbook = []
+$prompt = TTY::Prompt.new
+historytitle
+question1 = 'In what year was the European Union formed?'
+puts "\n\n"
+choices = %w(1917 1993 1945 1905)
+answer = $prompt.select(question1, choices, active_color: :yellow, help_color: :yellow)
+if answer == choices[1]
+    sleep(3)
+    totalscore << 1
+    correct_answer
+else
+    histbook << 'You may want to read "The European Union (Politics and Policies)" by Jonathan Olsen to 
+learn more about the European Union.'
+    wrong_answer
+end 
+``` 
+
 
 
 
@@ -62,7 +83,7 @@ insert trello board here
 
 3. You must then clone this Github repository to a folder on your computer. Please go to this Github link - https://github.com/james-mcgregor100/JamesMcGregor_T1A3 
 
-Once you have opened the link, you will see a green button which says "Code". Please click on that to clone the repository. If you can't find the "Code" button, you can copy and past this repo -> git@github.com:james-mcgregor100/JamesMcGregor_T1A3.git 
+Once you have opened the link, you will see a green button which says "Code". Please click on that to clone the repository. If you can't find the "Code" button, you can copy and past this repo -> ```ruby git@github.com:james-mcgregor100/JamesMcGregor_T1A3.git```
 
 4. After cloning the repo, please open up your Terminal on your computer. 
 
@@ -74,13 +95,13 @@ Once you have opened the link, you will see a green button which says "Code". Pl
 
 This will run the application, and also install the required gems which are used throughout the program. The gems that will be installed are - 
 
-gem "colorize", "~> 0.8.1"
+```ruby gem "colorize", "~> 0.8.1"```
 
-gem "tty-prompt"
+```ruby gem "tty-prompt"```
 
-gem "tty-progressbar", "~> 0.18.2"
+```ruby gem "tty-progressbar", "~> 0.18.2"```
 
-gem "tty-spinner"
+```ruby gem "tty-spinner"```
 
 
 ### Dependencies Required

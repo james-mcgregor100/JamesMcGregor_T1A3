@@ -5,14 +5,15 @@ require_relative "./titles.rb"
 require_relative "./answers.rb"
 
 def historyquiz
-        totalscore = []
-        histbook = []
-        $prompt = TTY::Prompt.new
-        historytitle
-        question1 = 'In what year was the European Union formed?'
-        puts "\n\n"
-        choices = %w(1917 1993 1945 1905)
-        answer = $prompt.select(question1, choices, active_color: :yellow, help_color: :yellow)
+        
+    ```ruby totalscore = []
+    histbook = []
+    $prompt = TTY::Prompt.new
+    historytitle
+    question1 = 'In what year was the European Union formed?'
+    puts "\n\n"
+    choices = %w(1917 1993 1945 1905)
+    answer = $prompt.select(question1, choices, active_color: :yellow, help_color: :yellow)
 
     if answer == choices[1]
         sleep(3)
@@ -23,6 +24,7 @@ def historyquiz
         histbook << 'You may want to read "The European Union (Politics and Policies)" by Jonathan Olsen to learn more about the European Union.'
         wrong_answer
     end 
+    ```
 
         system 'clear'
         $prompt = TTY::Prompt.new
