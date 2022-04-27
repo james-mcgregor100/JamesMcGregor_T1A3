@@ -207,7 +207,9 @@ In the example above, the there are two variables being used inconjunction with 
 
 ## Implementation Plan - R7
 
-insert trello board here
+Please view trello board here - https://trello.com/b/3cKr6MAM/terminal-app-planning 
+
+![trello_board](./docs/trello.png)
 
 ## Design Help Documentation / Instructions - R8
 
